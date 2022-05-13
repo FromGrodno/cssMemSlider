@@ -27,14 +27,12 @@ input {
    transition: all 0.3s;
 }
 
-
 img {
    width: 48vw;
    height: 33vw;
    object-fit: fill;
    border-radius: .5em;
 }
-
 
 .switch-text {
    margin-top: 2em;
@@ -69,7 +67,6 @@ span {
 .switch {
    display: flex;
    justify-content: space-between;
-
 }
 
 label {
@@ -88,4 +85,86 @@ label {
    border-radius: 50%;
    border: .1em solid azure;
    background-color: azure;
+}
+
+#knopka1:checked~.switch-text .one {
+   background-color: #24292d;
+   transition: all .3s;
+}
+
+#knopka2:checked~.switch-text .two {
+   background-color: #24292d;
+   transition: all .3s;
+}
+
+#knopka3:checked~.switch-text .three {
+   background-color: #24292d;
+   transition: all .3s;
+}
+
+#knopka4:checked~.switch-text .five {
+   background-color: #24292d;
+   transition: all .3s;
+}
+
+#knopka1:checked~.switch-text .text {
+   transform: translate(0);
+}
+
+#knopka2:checked~.switch-text .text {
+   transform: translate(-25%);
+}
+
+#knopka3:checked~.switch-text .text {
+   transform: translate(-50%);
+}
+
+#knopka4:checked~.switch-text .text {
+   transform: translate(-75%);
+}
+
+#knopka1:checked~.slider-mem .slides {
+   transform: translate(0);
+}
+
+#knopka2:checked~.slider-mem .slides {
+   transform: translate(-25%);
+}
+
+#knopka3:checked~.slider-mem .slides {
+   transform: translate(-50%);
+}
+
+#knopka4:checked~.slider-mem .slides {
+   transform: translate(-75%);
+}
+
+label:hover .label {
+   border: .1em solid yellow;
+   transition: all .3s;
+}
+
+label:active .label {
+   border: .1em solid yellow;
+   transition: all .3s;
+   background-color: yellow;
+}
+
+
+@media (max-width: 769px) {
+   .switch-text {
+      margin-top: 1em;
+      flex-direction: column-reverse;
+   }
+
+   .slider-switch {
+      width: 100%;
+      justify-content: center;
+   }
+
+   .slider-text {
+      width: 100%;
+      font-size: .7em;
+      margin-top: 1em;
+   }
 }
